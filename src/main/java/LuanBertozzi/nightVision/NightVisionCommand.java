@@ -6,6 +6,8 @@ import org.bukkit.entity.Player;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 
+import static org.bukkit.potion.PotionEffect.INFINITE_DURATION;
+
 public class NightVisionCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
@@ -21,7 +23,7 @@ public class NightVisionCommand implements CommandExecutor {
                 player.removePotionEffect(PotionEffectType.NIGHT_VISION);
                 player.sendMessage("Visão noturna removida!");
             } else {
-                player.addPotionEffect(new PotionEffect(PotionEffectType.NIGHT_VISION, 999999, 1,false, false, false));
+                player.addPotionEffect(new PotionEffect(PotionEffectType.NIGHT_VISION, -1, 1,false, false, false));
                 player.sendMessage("Visão noturna ativada!");
             }
         }
@@ -29,4 +31,3 @@ public class NightVisionCommand implements CommandExecutor {
     }
 
 }
-// Luan

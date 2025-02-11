@@ -13,4 +13,3 @@ permissions:
   nightvision.use:
     description: Permite o uso do plugin NightVision
     default: true
-  // Luan

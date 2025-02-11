@@ -19,4 +19,3 @@ public final class NightVision extends JavaPlugin {
     public void onDisable() {
     }
 }
-// Luan

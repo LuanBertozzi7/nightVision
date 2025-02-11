@@ -48,4 +48,3 @@ public class NightVisionAutoEnabled implements Listener {
         }
     }
 }
-//Luan
