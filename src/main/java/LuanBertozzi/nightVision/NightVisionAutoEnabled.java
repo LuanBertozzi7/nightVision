@@ -1,13 +1,14 @@
-package LuanBertozzi.nightVision.NightCommands;
+package LuanBertozzi.nightVision;
 
-import LuanBertozzi.nightVision.NightVision;
 import org.bukkit.event.Listener;
 import org.bukkit.*;
 import org.bukkit.GameMode;
 import org.bukkit.Location;
+import org.bukkit.Material;
 import org.bukkit.World;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
@@ -18,7 +19,6 @@ public class NightVisionAutoEnabled implements Listener {
     public NightVisionAutoEnabled(NightVision plugin) {
         this.plugin = plugin;
     }
-
     @EventHandler
     public void onPlayerMove(PlayerMoveEvent event) {
         Player player = event.getPlayer();
@@ -26,7 +26,6 @@ public class NightVisionAutoEnabled implements Listener {
         if (player.getGameMode() == GameMode.CREATIVE || player.getGameMode() == GameMode.SPECTATOR) {
             return; // Evitar que o plugin ative a jogadores no modo criativo ou espectador
         }
-
         Location loc = player.getLocation();
         World world = loc.getWorld();
 
