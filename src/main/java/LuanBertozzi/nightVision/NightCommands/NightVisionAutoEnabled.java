@@ -1,14 +1,13 @@
-package LuanBertozzi.nightVision;
+package LuanBertozzi.nightVision.NightCommands;
 
+import LuanBertozzi.nightVision.NightVision;
 import org.bukkit.event.Listener;
 import org.bukkit.*;
 import org.bukkit.GameMode;
 import org.bukkit.Location;
-import org.bukkit.Material;
 import org.bukkit.World;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
-import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
@@ -37,13 +36,13 @@ public class NightVisionAutoEnabled implements Listener {
         }
         if (LightLevel < 7) {
             if (!player.hasPotionEffect(PotionEffectType.NIGHT_VISION)) {
-                player.addPotionEffect(new PotionEffect(PotionEffectType.NIGHT_VISION, 999999, 1));
-                world.spawnParticle(Particle.RAIN, loc.add(0, 1, 0), 30, 0.5, 0.5, 0.5, 0.1);
+                player.addPotionEffect(new PotionEffect(PotionEffectType.NIGHT_VISION, -1, 1, false, false));
+                world.spawnParticle(Particle.FLAME, loc.add(0, 1, 0), 30, 0.5, 0.5, 0.5, 0.1);
             }
         } else {
             if (player.hasPotionEffect(PotionEffectType.NIGHT_VISION)) {
                 player.removePotionEffect(PotionEffectType.NIGHT_VISION);
-                world.spawnParticle(Particle.RAIN, loc.add(0, 1, 0), 30, 0.5, 0.5, 0.5, 0.1);
+                world.spawnParticle(Particle.FLAME, loc.add(0, 1, 0), 30, 0.5, 0.5, 0.5, 0.1);
             }
         }
     }
