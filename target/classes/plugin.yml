@@ -1,0 +1,15 @@
+name: NightVision
+version: '0.0.2'
+main: LuanBertozzi.nightVision.NightVision
+api-version: '1.21'
+
+commands:
+  nightvision:
+    description: Ativa a visão noturna
+    usage: /nightvision
+    permission: nightvision.use
+
+permissions:
+  nightvision.use:
+    description: Permite o uso do plugin NightVision
+    default: true
